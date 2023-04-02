@@ -20,7 +20,7 @@ const AddNote = () => {
       <h1>Add a Note</h1>
       <form className="my-3">
         <div className="mb-3">
-          <label for="title" className="form-label">
+          <label htmlFor="title" className="form-label">
             Title
           </label>
           <input
@@ -36,7 +36,7 @@ const AddNote = () => {
           
         </div>
         <div className="mb-3">
-          <label for="description" className="form-label">
+          <label htmlFor="description" className="form-label">
             Description
           </label>
           <input
@@ -50,7 +50,7 @@ const AddNote = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="tag" className="form-label">
+          <label htmlFor="tag" className="form-label">
             Tag
           </label>
           <input

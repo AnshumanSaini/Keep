@@ -46,7 +46,7 @@ const Notes = () => {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -66,7 +66,7 @@ const Notes = () => {
             <div className="modal-body">
               <form className="my-3">
                 <div className="mb-3">
-                  <label for="etitle" className="form-label">
+                  <label htmlFor="etitle" className="form-label">
                     Title
                   </label>
                   <input
@@ -81,7 +81,7 @@ const Notes = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label for="edescription" className="form-label">
+                  <label htmlFor="edescription" className="form-label">
                     Description
                   </label>
                   <input
@@ -95,7 +95,7 @@ const Notes = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label for="etag" className="form-label">
+                  <label htmlFor="etag" className="form-label">
                     Tag
                   </label>
                   <input
