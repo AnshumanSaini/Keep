@@ -77,6 +77,7 @@ const Notes = () => {
                     value={note.etitle}
                     aria-describedby="emailHelp"
                     onChange={onChange}
+                    minLength={5} required
                   />
                 </div>
                 <div className="mb-3">
@@ -90,6 +91,7 @@ const Notes = () => {
                     value={note.edescription}
                     name="edescription"
                     onChange={onChange}
+                    minLength={5} required
                   />
                 </div>
                 <div className="mb-3">
@@ -116,7 +118,7 @@ const Notes = () => {
               >
                 Close
               </button>
-              <button type="button" onClick={handleClick} className="btn btn-primary">
+              <button type="button" disabled={note.etitle.length<5 || note.edescription.length<5} onClick={handleClick} className="btn btn-primary">
                 Update Note
               </button>
             </div>
