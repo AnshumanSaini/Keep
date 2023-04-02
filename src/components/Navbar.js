@@ -3,8 +3,10 @@ import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import { useEffect } from "react";
 import About from "./About";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   let location = useLocation();
   useEffect(() => {
   }, [location]);
@@ -39,10 +41,10 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <form className="d-flex">
+          {!localStorage.getItem('token') ? <form className="d-flex">
           <Link class="btn btn-primary mx-1" to="/login" role="button">Login</Link>
           <Link class="btn btn-primary mx-1" to="/signup" role="button">Signup</Link>
-          </form>
+          </form> : <button className="btn btn-primary" onClick={()=>{navigate("/login")}}>Logout</button>}
         </div>
       </div>
     </nav>
