@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Signup = () => {
+const Signup = (props) => {
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
     name: "",
@@ -31,9 +31,10 @@ const Signup = () => {
       //Save the auth-token and redirect.
       localStorage.setItem("token", json.authToken);
       navigate("/");
+      props.showAlert("Account Created Successfully", "success");
     }
     if (json.success === false) {
-      alert("Please enter the coreect credentials!!!!!!!!");
+      props.showAlert("Invalid Credentials", "danger");
     }
   };
 
